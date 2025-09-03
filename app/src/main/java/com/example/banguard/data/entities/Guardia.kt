@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey
 data class Guardia (
     @PrimaryKey(autoGenerate = true)
     val id:Int=0,
+    val usuario: String,
     val dni: String,
     val contraseña: String
 )
