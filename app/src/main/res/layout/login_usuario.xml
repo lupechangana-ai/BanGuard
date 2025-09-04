@@ -15,43 +15,59 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ingresa a tu Usuario"
+            android:textColor="@color/celeste2"
+            android:layout_marginTop="35dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
         <ImageView
             android:layout_width="160dp"
             android:layout_height="160dp"
-            android:src="@drawable/persona"/>
+            android:src="@drawable/guardia"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usuario:"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:focusable="true"/>
 
         <EditText
             android:id="@+id/username_imput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
             android:background="@drawable/button_background"
             android:backgroundTint="@color/celeste1"
-            android:hint="Usuario"
+            android:hint="Dni"
             android:inputType="text"
             android:padding="18dp"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp" />
-
-        <EditText
-            android:layout_marginTop="16dp"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:text="Contraseña:"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:background="@drawable/button_background"
-            android:backgroundTint="@color/celeste1"
-            android:padding="18dp"
-            android:inputType="textPassword"/>
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:focusable="true"/>
         <EditText
             android:id="@+id/password_imput"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirmar Contraseña"
+            android:hint="*********"
             android:textColor="@color/white"
             android:textColorHint="@color/white"
             android:textSize="20sp"
@@ -59,27 +75,28 @@
             android:backgroundTint="@color/celeste1"
             android:padding="18dp"
             android:inputType="textPassword"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Olvidaste tu contrasena?"
+            android:textStyle="italic"
+            android:clickable="true"
+            android:layout_marginLeft="98dp"/>
         <Button
             android:id="@+id/login_btn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text="Iniciar Sesión"
             android:backgroundTint="@color/celeste2"
             android:textColor="@color/white"
             android:padding="18dp"
             android:layout_marginTop="32dp"
+            android:layout_marginLeft="90dp"
             android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/tvNoCuenta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿Ya tienes una cuenta?"
-            android:textColor="@color/black"
-            android:layout_marginTop="35dp"
-            android:textStyle="bold"
-            android:padding="8dp"
-            android:clickable="true"
-            android:focusable="true"/>
     </LinearLayout>
-
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="472dp"
+        android:src="@drawable/flecha"/>
 </RelativeLayout>

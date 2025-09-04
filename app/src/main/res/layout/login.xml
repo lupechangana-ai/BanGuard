@@ -26,6 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="@drawable/button_background"
+            android:backgroundTint="@color/celeste1"
             android:hint="Usuario"
             android:inputType="text"
             android:padding="18dp"
@@ -43,6 +44,7 @@
             android:textColorHint="@color/white"
             android:textSize="20sp"
             android:background="@drawable/button_background"
+            android:backgroundTint="@color/celeste1"
             android:padding="18dp"
             android:inputType="textPassword"/>
         <Button
@@ -50,8 +52,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Iniciar Sesión"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/celeste1"
+            android:backgroundTint="@color/celeste2"
+            android:textColor="@color/white"
             android:padding="18dp"
             android:layout_marginTop="32dp"
             android:textSize="20sp"/>
@@ -61,6 +63,7 @@
             android:layout_height="wrap_content"
             android:text="¿Olvidaste tu contrasena?"
             android:textStyle="italic"
+            android:clickable="true"
             android:layout_marginLeft="98dp"/>
         <TextView
             android:id="@+id/tvNoCuenta"
