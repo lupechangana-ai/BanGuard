@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/celeste"
+    android:background="@drawable/background"
     tools:context=".MainActivity"
     android:gravity="center"
     android:padding="16dp">
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Elige tu Usuario"
-            android:textColor="@color/celeste2"
+            android:textColor="@color/white"
             android:textSize="30sp"
             android:layout_marginTop="35dp"
             android:textStyle="bold"
@@ -78,6 +78,6 @@
             android:layout_width="40dp"
             android:layout_height="160dp"
             android:layout_marginLeft="150dp"
-            android:src="@drawable/añadir"/>
+            android:src="@drawable/anadir"/>
     </LinearLayout>
 </RelativeLayout>
