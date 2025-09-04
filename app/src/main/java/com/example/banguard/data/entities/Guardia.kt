@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "guardia")
 data class Guardia (
     @PrimaryKey(autoGenerate = true)
-    val id:Int=0,
+    val id_guardia:Int=0,
     val usuario: String,
     val dni: String,
     val contraseña: String
