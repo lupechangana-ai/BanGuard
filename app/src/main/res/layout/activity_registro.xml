@@ -10,6 +10,7 @@
     android:padding="16dp">
 
     <LinearLayout
+        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -33,7 +34,6 @@
             android:src="@drawable/guardia"/>
 
         <EditText
-            android:id="@+id/username_imput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -59,7 +59,6 @@
             android:padding="18dp"
             android:inputType="textPassword"/>
         <EditText
-            android:id="@+id/password_imput"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +71,6 @@
             android:padding="18dp"
             android:inputType="textPassword"/>
         <Button
-            android:id="@+id/login_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ingresar el Usuario"

@@ -95,6 +95,7 @@
             android:textSize="20sp"/>
     </LinearLayout>
     <ImageView
+        android:id="@+id/flecha"
         android:layout_width="60dp"
         android:layout_height="160dp"
         android:layout_marginTop="472dp"

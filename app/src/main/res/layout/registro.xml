@@ -21,7 +21,7 @@
             android:src="@drawable/persona"/>
 
         <EditText
-            android:id="@+id/username_imput"
+            android:id="@+id/name_imput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -35,6 +35,7 @@
             android:textSize="20sp" />
 
         <EditText
+            android:id="@+id/user_imput"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +48,7 @@
             android:padding="18dp"
             android:inputType="textPassword"/>
         <EditText
-            android:id="@+id/password_imput"
+            android:id="@+id/pass_imput"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,7 +61,7 @@
             android:padding="18dp"
             android:inputType="textPassword"/>
         <Button
-            android:id="@+id/login_btn"
+            android:id="@+id/register_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register"
