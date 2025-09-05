@@ -79,9 +79,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿Olvidaste tu contrasena?"
+            android:textSize="20sp"
             android:textStyle="italic"
             android:clickable="true"
-            android:layout_marginLeft="98dp"/>
+            android:layout_marginLeft="72dp"/>
         <Button
             android:id="@+id/login_btn"
             android:layout_width="wrap_content"

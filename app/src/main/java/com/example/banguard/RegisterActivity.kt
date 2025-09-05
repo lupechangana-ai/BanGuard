@@ -23,15 +23,14 @@ class RegisterActivity : AppCompatActivity() {
         val nameInput: EditText = findViewById(R.id.name_imput)
         val userInput: EditText = findViewById(R.id.user_imput)
         val passInput: EditText = findViewById(R.id.pass_imput)
-        val registerBtn: Button = findViewById(R.id.register_btn)
+        val registerbtn: Button = findViewById(R.id.register_btn)
 
-        registerBtn.setOnClickListener {
+        registerbtn.setOnClickListener {
             val name = nameInput.text.toString()
             val user = userInput.text.toString()
             val pass = passInput.text.toString()
-            val state = stateInput.text.toString()
 
-            if (name.isEmpty() || user.isEmpty() || pass.isEmpty()  ) {
+            if (name.isEmpty() || user.isEmpty() || pass.isEmpty()) {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
             } else {
                 lifecycleScope.launch {
@@ -39,8 +38,7 @@ class RegisterActivity : AppCompatActivity() {
                         Guardia(
                             usuario = name,
                             dni = user,
-                            contraseña = pass,
-                            estado_guardia =
+                            contraseña = pass
 
                         )
                     )

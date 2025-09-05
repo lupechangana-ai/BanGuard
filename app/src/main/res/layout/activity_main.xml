@@ -65,12 +65,14 @@
             android:textStyle="italic"
             android:clickable="true"
             android:layout_marginLeft="98dp"/>
-        <TextView
-            android:id="@+id/tvNoCuenta"
+
+        <Button
+            android:id="@+id/register_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="¿No tienes una cuenta?"
-            android:textColor="@color/black"
+            android:backgroundTint="@color/celeste2"
+            android:textColor="@color/white"
             android:layout_marginTop="35dp"
             android:textStyle="bold"
             android:padding="8dp"

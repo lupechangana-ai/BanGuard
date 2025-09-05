@@ -9,9 +9,7 @@ data class Guardia (
     val id_guardia:Int=0,
     val usuario: String,
     val dni: String,
-    val contraseña: String,
-    val estado_guardia: String
-
+    val contraseña: String
 ){
     init {
         require(dni.length == 8){"El DNI debe tener 8 caracteres."}

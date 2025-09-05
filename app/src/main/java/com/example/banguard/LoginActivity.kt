@@ -13,26 +13,19 @@ import com.example.banguard.dao.GuardiaDao
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
-
     private lateinit var guardiaDao: GuardiaDao
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        // 👇 Aquí conectas el XML a la Activity
-        setContentView(R.layout.login)
-
-        // Inicializar DB
         val db = AppDatabase.getDatabase(this)
         guardiaDao = db.guardiaDao()
 
-        // Referencias a los elementos del XML
         val loginBtn: Button = findViewById(R.id.login_btn)
         val userInput: EditText = findViewById(R.id.username_imput)
         val passInput: EditText = findViewById(R.id.password_imput)
-        val noAccountTxt: TextView = findViewById(R.id.tvNoCuenta)
+        val noAccountTxt: TextView = findViewById(R.id.register_btn)
 
-        // Acción del botón de login
         loginBtn.setOnClickListener {
             val user = userInput.text.toString()
             val pass = passInput.text.toString()
@@ -40,7 +33,6 @@ class LoginActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val guardia = guardiaDao.login(user, pass)
                 if (guardia != null) {
-                    // Login correcto
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                 } else {
@@ -48,8 +40,6 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
-
-        // Acción del texto "¿No tienes una cuenta?"
         noAccountTxt.setOnClickListener {
             val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
             startActivity(intent)

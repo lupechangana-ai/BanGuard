@@ -31,9 +31,9 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "institucion_db"  // 👈 nombre del archivo de BD en el dispositivo
+                    "institucion_db"
                 )
-                    .fallbackToDestructiveMigration() // elimina la BD si cambias la versión
+                    .fallbackToDestructiveMigration()
                     .build()
                 INSTANCE = instance
                 instance

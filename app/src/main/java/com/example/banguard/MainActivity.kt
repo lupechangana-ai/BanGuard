@@ -10,7 +10,8 @@ import com.example.banguard.dao.ProfesorDao
 import com.example.banguard.data.entities.Guardia
 import com.example.banguard.database.AppDatabase
 import kotlinx.coroutines.launch
-import android.widget.ImageView
+import android.widget.Button
+import android.content.Intent
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,18 +25,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 🔹 Inicializar la base de datos
+
+        val loginbtn = findViewById<Button>(R.id.login_btn)
+        val registerbtn = findViewById<Button>(R.id.register_btn)
+
+        loginbtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+        registerbtn.setOnClickListener {
+            Log.d("MainActivity", "Botón de registro presionado")
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
+
         db = AppDatabase.getDatabase(this)
         profesorDao = db.profesorDao()
         guardiaDao = db.guardiaDao()
         ingresoDao = db.ingresoDao()
 
-        // 🔹 Ejemplo: insertar un guardia
         lifecycleScope.launch {
             guardiaDao.insert(Guardia(usuario = "Juan Pérez", dni = "jperez", contraseña = "1234" ))
         }
 
-        // 🔹 Ejemplo: buscar profesor por DNI
         lifecycleScope.launch {
             val profe = profesorDao.getByDni("12345678")
             if (profe != null) {
