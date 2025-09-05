@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
         // 🔹 Ejemplo: insertar un guardia
         lifecycleScope.launch {
-            guardiaDao.insert(Guardia(usuario = "Juan Pérez", dni = "jperez", contraseña = "1234"))
+            guardiaDao.insert(Guardia(usuario = "Juan Pérez", dni = "jperez", contraseña = "1234" ))
         }
 
         // 🔹 Ejemplo: buscar profesor por DNI
@@ -44,10 +44,7 @@ class MainActivity : AppCompatActivity() {
                 Log.d("MainActivity", "Profesor NO encontrado")
             }
         }
-        val backArrow: ImageView = findViewById(R.id.flecha)
-        backArrow.setOnClickListener {
-            finish() // vuelve a la pantalla anterior
-        }
+
 
     }
 }

@@ -29,8 +29,9 @@ class RegisterActivity : AppCompatActivity() {
             val name = nameInput.text.toString()
             val user = userInput.text.toString()
             val pass = passInput.text.toString()
+            val state = stateInput.text.toString()
 
-            if (name.isEmpty() || user.isEmpty() || pass.isEmpty()) {
+            if (name.isEmpty() || user.isEmpty() || pass.isEmpty()  ) {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
             } else {
                 lifecycleScope.launch {
@@ -38,7 +39,9 @@ class RegisterActivity : AppCompatActivity() {
                         Guardia(
                             usuario = name,
                             dni = user,
-                            contraseña = pass
+                            contraseña = pass,
+                            estado_guardia =
+
                         )
                     )
                     runOnUiThread {
