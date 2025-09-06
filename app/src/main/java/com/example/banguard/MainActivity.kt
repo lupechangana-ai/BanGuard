@@ -7,11 +7,12 @@ import androidx.lifecycle.lifecycleScope
 import com.example.banguard.dao.GuardiaDao
 import com.example.banguard.dao.IngresoDao
 import com.example.banguard.dao.ProfesorDao
-import com.example.banguard.data.entities.Guardia
+import com.example.banguard.dao.AdministradorDao
 import com.example.banguard.database.AppDatabase
 import kotlinx.coroutines.launch
 import android.widget.Button
 import android.content.Intent
+import com.example.banguard.data.entities.Administrador
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var profesorDao: ProfesorDao
     private lateinit var guardiaDao: GuardiaDao
     private lateinit var ingresoDao: IngresoDao
+    private lateinit var administradorDao: AdministradorDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,17 +47,20 @@ class MainActivity : AppCompatActivity() {
         profesorDao = db.profesorDao()
         guardiaDao = db.guardiaDao()
         ingresoDao = db.ingresoDao()
-
-        lifecycleScope.launch {
-            guardiaDao.insert(Guardia(usuario = "Juan Pérez", dni = "jperez", contraseña = "1234" ))
-        }
+        administradorDao = db.administradorDao()
 
         lifecycleScope.launch {
             val profe = profesorDao.getByDni("12345678")
             if (profe != null) {
-                Log.d("MainActivity", "Profesor encontrado: ${profe.dni}")
+                Log.d("MainActivity", "Usuario encontrado: ${profe.dni}")
             } else {
-                Log.d("MainActivity", "Profesor NO encontrado")
+                Log.d("MainActivity", "Usuario NO encontrado")
+            }
+        }
+        lifecycleScope.launch {
+            val admins = db.administradorDao().getAll()
+            for (admin in admins) {
+                Log.d("DB_ADMIN", "ID: ${admin.id_administrador}, Usuario: ${admin.usuario}, Contraseña: ${admin.contraseña}")
             }
         }
 

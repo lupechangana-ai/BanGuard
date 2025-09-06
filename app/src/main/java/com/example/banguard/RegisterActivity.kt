@@ -7,8 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.banguard.data.entities.Administrador
 import com.example.banguard.database.AppDatabase
-import com.example.banguard.data.entities.Guardia
 import kotlinx.coroutines.launch
 
 class RegisterActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.registro)
 
         val db = AppDatabase.getDatabase(this)
-        val guardiaDao = db.guardiaDao()
+        val administradorDao = db.administradorDao()
 
         val nameInput: EditText = findViewById(R.id.name_imput)
         val userInput: EditText = findViewById(R.id.user_imput)
@@ -34,16 +34,14 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Todos los campos son obligatorios", Toast.LENGTH_SHORT).show()
             } else {
                 lifecycleScope.launch {
-                    guardiaDao.insert(
-                        Guardia(
+                    administradorDao.insert(
+                        Administrador(
                             usuario = name,
-                            dni = user,
                             contraseña = pass
-
                         )
                     )
                     runOnUiThread {
-                        Toast.makeText(this@RegisterActivity, "Guardia registrado con éxito", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RegisterActivity, "Usuario registrado con éxito", Toast.LENGTH_SHORT).show()
                         val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                         startActivity(intent)
                         finish()

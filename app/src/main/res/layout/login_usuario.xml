@@ -42,7 +42,7 @@
             android:focusable="true"/>
 
         <EditText
-            android:id="@+id/username_imput"
+            android:id="@+id/dni_imput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
@@ -63,7 +63,7 @@
             android:textStyle="bold"
             android:focusable="true"/>
         <EditText
-            android:id="@+id/password_imput"
+            android:id="@+id/contra_imput"
             android:layout_marginTop="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
